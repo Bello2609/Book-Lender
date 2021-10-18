@@ -1,38 +1,38 @@
 // Book Lender Service
 
 
-const BookLender = function (name) {
+const BookLender =  (name) {
 	const lenderName = name;
 	const books = [];
 	const users = [];
 
-	function getLenderName() {
+	const getLenderName = ()=> {
 		return lenderName;
 	}
 
 	// user methods
-	function getUsers() {
+	const getUsers = ()=> {
 		console.log(users);
 		return users;
 	}
 
-	function addUser(user) {
+	const addUser = (user)=> {
 		users.push(user);
 		console.log("New User Added!");
 		return users;
 	}
 
 	// Book methods
-	function getBooks() {
+	const getBooks = ()=> {
 		return books;
 	}
 
-	function addBook(book) {
+	const addBook = (book)=> {
 		books.push(book);
 		console.log("New Book Added!");
 	}
 
-	function borrowBook(user, book) {
+	const borrowBook = (user, book)=> {
 		for (let i = 0; i < users.length; i++) {
 			if (user == users[i].name) {
 				for (let i = 0; i < books.length; i++) {
@@ -47,7 +47,7 @@ const BookLender = function (name) {
 		}
 	}
 
-	function retrieveBook(user, book) {
+	const retrieveBook = (user, book)=> {
 		for (let i = 0; i < this.users.length; i++) {
 			if (user == this.users[i].name) {
 				books.push(book);
